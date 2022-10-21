@@ -2,18 +2,18 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class P32 {
-    public static void main(String[] args)throws IOException{
-        System.out.println("請問要在第幾次處理結束迴圈呢？(1~10)");
+public class P34 {
+    public static void main(String[] args)throws IOException {
+        System.out.println("要跳過第幾次的處理呢？");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String str = br.readLine();
         int res = Integer.parseInt(str);
 
-        for(int i =1;i<=10;i++){
-            System.out.println("第"+i+"次的處理。");
+        for(int i =1;i<= 10;i++){
             if(i == res)
-                break;
+                continue;
+            System.out.println("第"+i+"次的處理");
         }
     }
 }
